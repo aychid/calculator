@@ -1,0 +1,62 @@
+:root{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* Change borders from percentages to solid values s */
+
+*{
+    border: 1px solid red
+}
+
+.content{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 40%;
+}
+
+.number-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    height: 20%;
+    width: 20%;
+}
+
+.number, .operator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 30%;
+    margin: 1%;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.number{
+    background-color: azure;
+}
+
+.keys{
+    display: flex;
+    justify-content: center;
+}
+
+.screen{
+    height: 10%;
+    width: 20%;
+    background-color: darkolivegreen;
+    border: 2px solid black;
+}
+
+.operator-container{
+    display: flex;
+    flex-flow: column nowrap;
+    height: 20%;
+    width: 20%;
+}
