@@ -23,8 +23,8 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    height: 20%;
-    width: 20%;
+    height: 40%;
+    width: 40%;
 }
 
 .number, .operator{
@@ -52,11 +52,14 @@
     width: 20%;
     background-color: darkolivegreen;
     border: 2px solid black;
+    justify-content: center;
+    text-align: right;
 }
 
 .operator-container{
     display: flex;
     flex-flow: column nowrap;
     height: 20%;
-    width: 20%;
+    width: 40%;
 }
+
