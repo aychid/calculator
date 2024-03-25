@@ -25,6 +25,7 @@ operate = function(num1, operator, num2){
     }
     else {
         return operator(num1,num2)
+        
     }
 }
 
@@ -33,23 +34,22 @@ const numButtons = document.querySelectorAll(".number")
 var isNum1 = true;
 
 numButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        if (display === undefined && operator === undefined) {
+    button.addEventListener('click', () => { // TODO fix numbers not resetting properly and refactor to be more clean
+        
+        if (display === undefined && isNum1 === true) {
             display = `${button.innerHTML}`;   
         }
-        else if (display != undefined && operator === undefined) {
+        else if (display != undefined && isNum1 === true) {
             display = display + `${button.innerHTML}`;
         }
-        else if (typeof(number1) === 'number' && operator !== undefined && isNum1 === true){
-            isNum1 = false;
+        else if (display === undefined && isNum1 === false ){
             display = `${button.innerHTML}`;   
         } 
-        else if (isNum1 == false && operator !== undefined) {
-            console.log("test")
+        else if (display != undefined && isNum1 == false) {
             display = display + `${button.innerHTML}`;
         } 
         else {
-            alert("Error")
+            console.log("Error2")
         }
 
         screen.innerHTML = display
@@ -65,29 +65,37 @@ numButtons.forEach(button => {
 
 const equalButton = document.querySelector(".equal")
 equalButton.addEventListener('click', () => {
-    let result = operate(number1, operator, number2)
-    number1 = result
-    screen.innerHTML = result
+    let result = operate(number1, operator, number2);
+    number1 = result;
+    screen.innerHTML = result;
 })
 
 const addition = document.getElementById("addition")
 addition.addEventListener('click', () => {
-    operator = add
+    operator = add;
+    isNum1 = false;
+    display = undefined;
 })
 
 const subtraction = document.getElementById("subtraction")
 subtraction.addEventListener('click', () => {
-    operator = subtract
+    operator = subtract;
+    isNum1 = false;
+    display = undefined;
 })
 
 const multiplication = document.getElementById("multiplication")
 multiplication.addEventListener('click', () => {
-    operator = multiply
+    operator = multiply;
+    isNum1 = false;
+    display = undefined;
 })
 
 const division = document.getElementById("division")
 division.addEventListener('click', () => {
-    operator = divide
+    operator = divide;
+    isNum1 = false;
+    display = undefined;
 })
 
 const clearButton = document.getElementById("clear")
@@ -95,6 +103,7 @@ clearButton.addEventListener('click', () => {
     screen.innerHTML = 0;
     display = undefined;
     number1 = undefined;
+    number2 = undefined
     operator = undefined;
     isNum1 = true;
 })
