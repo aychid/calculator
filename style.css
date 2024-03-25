@@ -4,8 +4,6 @@
     font-family: sans-serif;
 }
 
-/* Change borders from percentages to solid values s */
-
 .header {
     display: flex;
     justify-content: center;
