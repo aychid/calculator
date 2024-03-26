@@ -1,3 +1,5 @@
+// version 1 26/03/2024
+
 const operators = {
     "+": (num1, num2) => num1 + num2,
     "-": (num1, num2) => num1 - num2,

@@ -69,7 +69,14 @@
     align-items: center;
     justify-content: end;
 }
+
 .container{
     display: flex;
     justify-content: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
